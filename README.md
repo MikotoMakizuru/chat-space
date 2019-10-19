@@ -36,30 +36,29 @@ Things you may want to cover:
 ## messesテーブル
 |Column | Type | Options|
 |------|----|-------|
-|image | text | null: false|
-|text | text | null: false|
-|user_id | integer | null: false, foreign_key: true|
+|image | text | |
+|text | text | |
+|user_id | referencse | foreign_key: true|
+|group_id | referencse | foreign_key: true |
 ### Association
 - belongs_to :user
-- has_many :comments
-- has_many :posts_tags
-- has_many  :tags,  through:  :posts_tags
+- belongs_to :group
 
 ## groupテーブル
 |Column | Type | Options|
 |------ | ---- | -------|
 |title | user_id | null: false|
-|name | text | foreign_key: true|
+|name | text | foreign_key: true, unique: true|
 ### Association
-- has_many :posts_tags
-- has_many  :posts,  through:  :posts_tags
+- has_many :messes
+- has_many  :users, through: :groupusers
+- has_many  :groupusers
 
 ## groupusersテーブル
 |Column | Type | Options|
 |------ | ---- | -------|
-|user_id | text | null: false|
 |user_id | integer | null: false, foreign_key: true|
 |group_id | integer | null: false, foreign_key: true|
 ### Association
-- belongs_to :post
+- belongs_to :group
 - belongs_to :user
