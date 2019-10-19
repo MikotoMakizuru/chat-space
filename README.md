@@ -47,12 +47,12 @@ Things you may want to cover:
 ## groupテーブル
 |Column | Type | Options|
 |------ | ---- | -------|
-|title | user_id | null: false|
-|name | text | foreign_key: true, unique: true|
+| | user_id | null: false|
+|string | text | foreign_key: true, unique: true|
 ### Association
 - has_many :messes
-- has_many  :users, through: :groupusers
-- has_many  :groupusers
+- has_many  :users, through: :group_users
+- has_many  :group_users
 
 ## groupusersテーブル
 |Column | Type | Options|
