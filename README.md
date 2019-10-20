@@ -53,7 +53,7 @@ Things you may want to cover:
 - has_many  :users, through: :group_users
 - has_many  :groups_users
 
-## groupusersテーブル
+## group_usersテーブル
 |Column | Type | Options|
 |------ | ---- | -------|
 |user_id | reference | null: false, foreign_key: true|
