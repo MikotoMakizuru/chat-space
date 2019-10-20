@@ -33,32 +33,31 @@ Things you may want to cover:
 - has_many :message
 - has_many :users_groups
 
-## messageテーブル
+## messagesテーブル
 |Column | Type | Options|
 |------|----|-------|
-|image | text | |
-|text | text | |
-|user_id | referencse | foreign_key: true|
-|group_id | referencse | foreign_key: true |
+|body | text | |
+|image | string | |
+|group_id	| integer | null: false, foreign_key: true |
+|group_id :integer | null: false, foreign_key: true |
 ### Association
 - belongs_to :user
 - belongs_to :group
 
-## groupテーブル
+## groupsテーブル
 |Column | Type | Options|
 |------ | ---- | -------|
-| | user_id | null: false|
-|string | text | foreign_key: true, unique: true|
+| name	 | string	 | null: false|
 ### Association
-- has_many :message
+- has_many :messages
 - has_many  :users, through: :group_users
-- has_many  :group_users
+- has_many  :groups_users
 
 ## groupusersテーブル
 |Column | Type | Options|
 |------ | ---- | -------|
-|user_id | integer | null: false, foreign_key: true|
-|group_id | integer | null: false, foreign_key: true|
+|user_id | reference | null: false, foreign_key: true|
+|group_id | reference | null: false, foreign_key: true|
 ### Association
 - belongs_to :group
-- belongs_to :user
+- belongs_to :users
