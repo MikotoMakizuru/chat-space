@@ -1,0 +1,49 @@
+
+.flash-box
+  %p.notice グループを作成しました
+.wrapper
+  .chat-side
+    .side-header
+      .side-header__box
+        %p.side-header__box__user-name Makizushi
+        %ul.side-header__box__menu
+          %li.side-header__box__menu__new-group
+            %i.fa.fa-edit
+          %li.side-header__box__menu__edit-user
+            %i.fa.fa-cog
+    .groups
+      .group
+        %p.group__group-name グループ名
+        %p.group__latest-message みこと
+      .group
+        %p.group__group-name グループ名
+        %p.group__latest-message まだメッセージがありません
+
+  .chat-main
+  
+    .main-header
+      .main-header__leftbox
+        %h2.main-header__leftbox__currentgroup
+          グループ名
+        %h1.main-header__leftbox__memberlist
+          Member：aaaaaa
+      .main-header__leftbox__edit-btn
+        =link_to "Edit","#",class:"main-header__leftbox__edit-btn__text"
+        
+
+    .messages
+      .message
+        .message__upper-info
+          %p.message__upper-info__talker Makizushi
+          %p.message__upper-info__date 2019/10/15(Tue) 21:17:15
+        %p.message__text mikoto
+
+    .form
+      %form
+        %input.form__message{placeholder: "type a message"}
+        .form__mask
+          %label.form__mask__image
+            = fa_icon 'picture-o', class: 'icon'
+            %input.hidden{type: 'file'}
+        %input.form__submit{type: 'submit', value: 'Send'}
+
