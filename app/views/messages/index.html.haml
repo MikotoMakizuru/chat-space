@@ -17,18 +17,14 @@
         
 
     .messages
-      .message
-        .message__upper-info
-          %p.message__upper-info__talker Makizushi
-          %p.message__upper-info__date 2019/10/15(Tue) 21:17:15
-        %p.message__text mikoto
+      = render partial: 'message', collection: @messages
 
     .form
-      %form
-        %input.form__message{placeholder: "type a message"}
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
         .form__mask
-          %label.form__mask__image
+          = f.label :image, class: 'form__mask__image' do
             = fa_icon 'picture-o', class: 'icon'
-            %input.hidden{type: 'file'}
-        %input.form__submit{type: 'submit', value: 'Send'}
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
 
