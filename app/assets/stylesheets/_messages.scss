@@ -11,57 +11,55 @@
       color:white;
     }
 }
-.wrapper {
-  .chat__side {
-    height: 100vh;
+.wrapper{
+  display: flex;
+  .chat-side{
     width: 300px;
-    float: left;
-    background-color: #2f3e51;
     color: white;
-    .side__header {
+    a{
+      color: white;
+      text-decoration: none;
+    }
+    .side-header{
       background-color: #253141;
       height: 100px;
       display: flex;
       align-items: center;
       padding: 0 20px;
-      &__box {
+      &__box{
         display: flex;
         justify-content: space-between;
         width: 100%;
         font-weight: bold;
-        &__user-name {
-          color:white;
+        &__user-name{
+
         }
-        .side__header__box__menu {
+        &__menu{
           display: flex;
-          color:white;
-        }
-        &__new-group {
-          color:white;
-        }
-        .side__header__box__menu__edit-user {
-          color:white;
-          margin-left: 0.3rem;
+          &__new-group{
+            margin-left: 0.3rem;
+          }
+          &__edit-user{
+            margin-left: 0.3rem;
+          }
         }
       }
     }
-    .groups {
-      height: calc(100vh-100px);
-      background-color: #2f3e51;
-      padding: 20px 20px 0;
-      overflow: scroll;
-      color: white;
-      .group {
-        margin-bottom: 40px;
-        &__group-name {
-          font-size: 15px;
-          margin-bottom: 5px;
-        }
-        &__latest-message {
-          font-size: 11px;
-        }
+  .groups{
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 20px 20px 0;
+    .group{
+      margin-bottom: 40px;
+      &__group-name{
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &__lastest-message{
+        font-size: 11px;
       }
     }
+  }
   }
 
   .chat__main {
@@ -108,7 +106,7 @@
       height: calc(100vh - 190px);
       padding: 46px 40px;
       background-color: #fafafa;
-      overflow: scroll;  
+      overflow: scroll;
       .message {
         &__upper-info {
           margin-bottom: 10px;
@@ -142,6 +140,7 @@
         float: left;
         height: 50px;
         width: calc(100% - 150px);
+        padding: 0 40px 0 10px;
       }
       &__mask {
         background-color: #fafafa;

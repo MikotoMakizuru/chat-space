@@ -2,35 +2,15 @@
 .flash-box
   %p.notice グループを作成しました
 .wrapper
-  .chat__side
-    .side__header
-      .side__header__box
-        %p.side__header__box__user-name
-          = current_user.name
-        %ul.side__header__box__menu
-          %li.side__header__box__menu__new-group
-            %i.fa.fa-edit
-              -# =link_to new_group_path do
-              -#   = fa_icon 'pencil-square-o', class: 'icon'
-          %li.side__header__box__menu__edit-user
-            %i.fa.fa-cog
-              -# = link_to edit_user_path(current_user) do
-              -#   = fa_icon 'cog', class: 'icon'
-    .groups
-      .group
-        %p.group__group-name グループ名
-        %p.group__latest-message みこと
-      .group
-        %p.group__group-name グループ名
-        %p.group__latest-message まだメッセージがありません
+  = render"shared/side_bar"
 
   .chat__main
-  
+
     .main-header
       .main-header__leftbox
         %h2.main-header__leftbox__currentgroup
           グループ名
-        %h1.main-header__leftbox__memberlist
+        %p.main-header__leftbox__memberlist
           Member：aaaaaa
       .main-header__leftbox__edit-btn
         =link_to "Edit","#",class:"main-header__leftbox__edit-btn__text"
