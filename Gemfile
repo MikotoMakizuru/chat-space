@@ -55,4 +55,6 @@ gem 'erb2haml'
 gem 'haml-rails'
 gem 'font-awesome-sass', '~> 5.4.1'
 gem "font-awesome-rails"
-
+gem 'devise'
+gem 'carrierwave'
+gem 'mini_magick'
