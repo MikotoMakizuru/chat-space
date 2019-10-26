@@ -9,11 +9,13 @@
     .main-header
       .main-header__leftbox
         %h2.main-header__leftbox__currentgroup
-          グループ名
+          =@group.name
         %p.main-header__leftbox__memberlist
-          Member：aaaaaa
+          Member：
+          - @group.users.each do |user|
+            =user.name
       .main-header__leftbox__edit-btn
-        =link_to "Edit","#",class:"main-header__leftbox__edit-btn__text"
+        =link_to "Edit","edit",class:"main-header__leftbox__edit-btn__text"
         
 
     .messages
