@@ -16,11 +16,8 @@
             =user.name
       .main-header__leftbox__edit-btn
         =link_to "Edit","edit",class:"main-header__leftbox__edit-btn__text"
-        
-
     .messages
       = render partial: 'message', collection: @messages
-
     .form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
