@@ -2,14 +2,9 @@
   box-sizing: border-box
 }
 
-.flash-box {
-    font-size: 1rem;
-    font-weight: lighter;
-    text-align: center;
-    background-color: #38aef0;
-    .notice{
-      color:white;
-    }
+::-webkit-scrollbar {
+  display: none;
+  -webkit-appearance: none;
 }
 .wrapper{
   display: flex;
@@ -49,6 +44,7 @@
     height: calc(100vh - 100px);
     background-color: #2f3e51;
     padding: 20px 20px 0;
+    overflow: scroll;
     .group{
       margin-bottom: 40px;
       &__group-name{
@@ -123,7 +119,7 @@
             padding-left: 10px;
           }
         } 
-        &__text {
+        .lower-message {
           color: #434a54;
           font-size: 14px;
           margin-bottom: 10px;
