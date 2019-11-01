@@ -15,4 +15,11 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# 画像ファイルはアップロードしたくないので、追記
+public/uploads/*
+
+# DS_Storeファイルはアップロードしたくないので追記
+.DS_Store
+
 config/secrets.yml
