@@ -22,4 +22,4 @@ public/uploads/*
 # DS_Storeファイルはアップロードしたくないので追記
 .DS_Store
 
-config/secrets.yml
+config/secrets.yml  
